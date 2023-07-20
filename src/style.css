@@ -3,8 +3,8 @@ body {
   }
     
   .cell {
-    height: 50px;
-    width: 50px;
+    height: 4em;
+    width: 4em;
     border: 1.5px solid grey;
     border-style: inset;
   }
