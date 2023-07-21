@@ -71,12 +71,6 @@ export function runBoard() {
             }
         }
     })
-
-    // onload, prompt to choose first spot
-    // once pressed, prompt to choose second spot
-    // once pressed, path will make cells green
-    // pressing again will reset board and prompt again
-    // once both are undefined or the second position is chosen, put into parameter for tree and output result
 }
 
 function createPosition(stringOfNum) {
@@ -104,6 +98,8 @@ function displayPath(array) {
         for (const cell of cells) {
             if (cell.getAttribute('id') == string) {
                 cell.textContent = array.indexOf(position) + 1;
+                cell.style.fontWeight = '800';
+                cell.style.fontSize = '20px';
                 cell.style.textAlign = 'center';
                 if (!cell.style.backgroundColor) cell.style.backgroundColor = 'yellow';
             }
