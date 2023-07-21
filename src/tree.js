@@ -71,7 +71,7 @@ class Tree {
         }
     }
 
-    shortestPath(path=[],queue=[this.root],length=0) {
+    shortestPath(path=[]) {
         let parent = this.found;
         path.push(parent.data)
         while (parent.parent !== null) {
