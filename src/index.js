@@ -4,4 +4,3 @@ import { runCheck } from './tree';
 
 createBoard();
 runBoard();
-runCheck();
