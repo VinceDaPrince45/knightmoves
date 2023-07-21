@@ -47,3 +47,27 @@ export function createBoard() {
     ChessTable.setAttribute('width', 'auto');
     document.body.appendChild(center);
 }
+
+export function runBoard() {
+    const body = document.querySelector('body');
+    let positionOne;
+    let positionTwo;
+    body.addEventListener('click', (e) => {
+        if (e.target.classList.contains('cell')) {
+            if (!positionOne) {
+                positionOne = e.target.getAttribute("id");
+            } else if (!positionTwo) {
+                positionTwo = e.target.getAttribute('id');
+            } else if (positionOne && positionTwo) {
+                positionOne = e.target.getAttribute('id');
+                positionTwo = null;
+            }
+            console.log(positionOne,positionTwo)
+        }
+    })
+
+    // onload, prompt to choose first spot
+    // once pressed, prompt to choose second spot
+    // once pressed, path will make cells green
+    // pressing again will reset board and prompt again
+}

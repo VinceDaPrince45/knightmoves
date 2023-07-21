@@ -101,8 +101,7 @@ class Tree {
                         idx = Math.trunc(idx/8);
                         path.push(array[length--][idx])
                     }
-                    console.log(path.reverse())
-                    return;
+                    return path.reverse();
                 }
             }
             length++;
@@ -113,6 +112,5 @@ class Tree {
 export function runCheck() {
     const tree = new Tree([3,3],[4,3]);
     tree.buildTree();
-    console.log(tree.root)
-    tree.shortestPath();
+    console.log(tree.shortestPath());
 }
